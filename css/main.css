@@ -1,0 +1,199 @@
+:root{
+    --main-color: rgb(255, 255, 255);
+    --aside-color :#17A095;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Cairo', sans-serif;
+}
+
+.layout{
+  
+
+    display: flex;
+}
+
+.print{
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    border: 1px solid var(--aside-color);
+    padding: 10px 20px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+.print:hover{
+    background-color: var(--aside-color);
+    color: white;
+}
+aside{
+    padding: 20px;
+    background-color: var(--aside-color);
+    width: 25%;
+    color: var(--main-color);
+    
+}
+aside  img{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto 40px ;
+}
+aside h3{
+    font-size: 25px;
+}
+aside span{
+   
+   display: block;
+   font-size: 20px;
+   
+}
+.line-break{
+    margin: 20px 0;
+    height: 4px;
+    background-color: var(--main-color); 
+    width: 90%;
+    position: relative;
+    margin:20px  auto 0;
+}
+.line-break::before{
+    content:"";
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 10px;
+    width: 10px;
+    border: 3px solid var(--main-color);
+
+}
+ul.skills{
+    list-style: none;
+    padding: 0;
+}
+ul.skills li{
+    padding: 10px 0;
+}
+
+aside .language{
+    line-height: 1;
+}
+
+aside .contact h3{
+    font-size: 14px;
+}
+aside .contact i{
+    font-size: 20px;
+}
+.content{
+    flex: 1;
+}
+
+.content div , .resume{
+    padding: 0 40px ;
+}
+.content ul{
+    padding-left: 20px;
+}
+.title{
+    color: var(--aside-color);
+}
+.content a{
+    color: #000;
+    font-size: 18;
+}
+.infor span{
+    display: block;
+    margin-top: 10px;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #777;
+}
+.infor span i {
+    width: 20px;
+}
+
+
+div.infor li{
+    padding: 5px 0;
+}
+
+div.educate {
+    margin-top: 30px;
+}
+div.educate .title{
+    color: var(--aside-color);
+}
+div.educate p span{
+    font-size: 13px ;
+    color: #777;
+}
+
+div.educate li{
+    padding: 5px 0;
+}
+div.educate li a{
+    font-size: 18px;
+}
+
+div.projects{
+    margin: 10px 0 0;
+
+}
+
+div.projects ul li{
+    padding: 5px 0;
+}
+div.projects ul li a{
+   font-weight: 600;
+}
+div.resume{
+    padding: 30px 40px 30px 40px;
+    margin: 50px 0 0;
+    background-color: #f5f4f4;
+}
+ 
+div.resume ul li{
+     padding: 5px 0;
+}
+
+
+@media print{
+    -webkit-aside{
+        visibility: visible;
+       
+        background-color: #1b1d1d !important;
+
+        
+    }
+    aside{
+        visibility: visible;
+       
+        background-color: var(--aside-color) !important;
+        width: 35%;
+
+        
+    }
+    aside span{
+   
+        font-size: 14px;
+        
+     }
+  
+
+     aside .language h3{
+        font-size: 18;
+     }
+
+    .print{
+        visibility: hidden;
+    }
+}
